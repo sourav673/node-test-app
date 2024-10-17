@@ -11,6 +11,7 @@ jobs:
           name: Install npm dependencies
           command: |
             npm install --save
+      - run: node --version
   build_docker_image:
     docker:
       - image: circleci/node:12
