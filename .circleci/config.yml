@@ -25,7 +25,6 @@ jobs:
     steps:
       - checkout
       - aws-cli/setup
-      - serverless/setup
       - node/install-packages
       - serverless/setup:
           provider: AWS
