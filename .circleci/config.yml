@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@5.1.1
   node: circleci/node@6.2.0
-  serverless-framework: circleci/serverless-framework@2.0.2
+  serverless: circleci/serverless-framework@2.0.2
 jobs:
   build_test:
     docker:
@@ -21,11 +21,11 @@ jobs:
           name: Print me
           command: echo "Hello World!"
   deploy:
-    executor: serverless-framework/default
+    executor: serverless/default
     steps:
       - checkout
       - aws-cli/setup
-      - serverless-framework/setup
+      - serverless/setup
       - node/install-packages
       - serverless/setup:
           provider: AWS
