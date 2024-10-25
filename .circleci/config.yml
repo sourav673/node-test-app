@@ -21,7 +21,7 @@ jobs:
           name: Print me
           command: echo "Hello World!"
   deploy:
-    executor: serverless/default
+    executor: serverless-framework/default
     steps:
       - checkout
       - aws-cli/setup
