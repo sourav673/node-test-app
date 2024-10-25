@@ -15,6 +15,9 @@ jobs:
           name: Check Node Version
           command: |
             node --version
+      - run:
+          name: Print me
+          command: echo "Hello World!"
   build_docker_image:
     docker:
       - image: circleci/node:12
